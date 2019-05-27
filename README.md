@@ -1,4 +1,4 @@
-# deep_learning
+# Deep_Learning For Product Manager
 This repo is dedicated to documenting my learning in deep learning (DL) and machine learning (ML).
 
 My Approch:
