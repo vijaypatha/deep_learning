@@ -1,7 +1,7 @@
-#Deep Learning Exercises for Product Managers 
+# Deep Learning Exercises for Product Managers 
 
 This repo is dedicated to documenting my learning in deep learning (DL) and machine learning (ML).
-##My Tenets:
+## My Tenets:
 
 1. I'm a cook. I really don’t care about wiring of the appliance of the hi-tech kitchen.
 
