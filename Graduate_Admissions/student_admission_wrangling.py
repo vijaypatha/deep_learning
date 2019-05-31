@@ -4,7 +4,7 @@
 # ### Focusing on Data Wrangling
 # - CREATING GRAPHS (Colors) [DONE]
 # - UNDERSTAND THE RELATIONSHIP BETWEEN FEATURES [DONE]
-# - CERATING DUMMIES (ONE HOT ENCODING )
+# - CERATING DUMMIES (ONE HOT ENCODING ) [DONE]
 # - SCALING DATA
 # - SPLITING DATA IN TRAINING AND TEST [***]
 # - SPLITTING DATA INTO FEATURES (INPUTS) AND LABLES (OUTPUTS) [***]
@@ -115,8 +115,51 @@ contact_data_sets = pd.concat([data_rank1, data], axis=0)
 contact_data_sets.head(3)
 
 
-# In[ ]:
+# In[122]:
 
 
+dummies = pd.get_dummies(data['rank'], prefix = 'wsj')
+dummies.head()
 
+
+# In[131]:
+
+
+test = pd.concat([data, pd.get_dummies(data['rank'], prefix = 'rank')], axis=1)
+test.head(5)
+
+
+# In[132]:
+
+
+test = test.drop('rank', axis=1)
+
+
+# In[133]:
+
+
+test.head(5)
+
+
+# # SCALING
+
+# In[135]:
+
+
+# Making a copy of our data
+processed_data = test
+processed_data.head(5)
+
+
+# In[136]:
+
+
+processed_data['gre'] = processed_data['gre']/800
+processed_data['gpa'] = processed_data['gpa']/4
+
+
+# In[137]:
+
+
+processed_data.head()
 
